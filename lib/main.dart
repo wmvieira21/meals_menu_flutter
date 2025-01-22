@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meals_menu/data/dummy_categories.dart';
+import 'package:meals_menu/data/dummy_meals.dart';
+import 'package:meals_menu/models/meal.dart';
 import 'package:meals_menu/screens/categories.dart';
+import 'package:meals_menu/screens/meals.dart';
 
 final theme = ThemeData(
     useMaterial3: true,
@@ -14,13 +18,20 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  App({super.key});
+
+  final List<Meal> meals = dummyMeals;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
       home: Scaffold(
           body: SafeArea(
-        child: CategoriesScreen(),
+        child: MealsScreen(
+          meals: meals,
+          tittle: 'Meals',
+        ),
       )),
     );
   }
