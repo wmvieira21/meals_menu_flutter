@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:meals_menu/models/meal.dart';
+import 'package:meals_menu/widgets/meals/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal});
+  const MealItem({super.key, required this.meal, required this.onSelectMeal});
 
   final Meal meal;
+  final Function(Meal meal) onSelectMeal;
+
+  String _getEnumFormattedText(String text) {
+    return text[0].toUpperCase() + text.substring(1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +25,8 @@ class MealItem extends StatelessWidget {
       elevation: 2,
       key: ValueKey(meal),
       child: InkWell(
-        onTap: () {},
+        splashColor: Theme.of(context).colorScheme.onErrorContainer,
+        onTap: () => onSelectMeal(meal),
         child: Stack(
           children: [
             FadeInImage(
@@ -51,7 +58,21 @@ class MealItem extends StatelessWidget {
                           color: Colors.white),
                     ),
                     Row(
-                      children: [],
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      spacing: 12,
+                      children: [
+                        MealItemTrait(
+                            icon: Icons.schedule,
+                            label: '${meal.duration} min'),
+                        MealItemTrait(
+                          icon: Icons.work,
+                          label: _getEnumFormattedText(meal.complexity.name),
+                        ),
+                        MealItemTrait(
+                          icon: Icons.attach_money,
+                          label: _getEnumFormattedText(meal.affordability.name),
+                        ),
+                      ],
                     )
                   ],
                 ),
