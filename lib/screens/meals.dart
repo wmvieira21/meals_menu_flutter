@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_menu/models/meal.dart';
+import 'package:meals_menu/widgets/meals/meal_item.dart';
 import 'package:meals_menu/widgets/meals/no_meals_found.dart';
 
 class MealsScreen extends StatelessWidget {
@@ -15,11 +16,7 @@ class MealsScreen extends StatelessWidget {
     return ListView.builder(
         itemCount: meals.length,
         itemBuilder: (context, index) {
-          return Card(
-            color: Theme.of(context).colorScheme.onPrimaryContainer,
-            key: ValueKey(meals),
-            child: Text(meals[index].tittle),
-          );
+          return MealItem(meal: meals[index]);
         });
   }
 

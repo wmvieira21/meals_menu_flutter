@@ -18,21 +18,17 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  App({super.key});
-
-  final List<Meal> meals = dummyMeals;
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: Scaffold(
-          body: SafeArea(
-        child: MealsScreen(
-          meals: meals,
-          tittle: 'Meals',
+      home: const Scaffold(
+        body: SafeArea(
+          child: CategoriesScreen(),
         ),
-      )),
+      ),
     );
   }
 }

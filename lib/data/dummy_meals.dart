@@ -4,9 +4,10 @@ import 'package:meals_menu/models/meal.dart';
 List<Meal> dummyMeals = [
   Meal(
     id: '1',
-    categories: ['Dinner', 'Vegetarian'],
+    categories: ['c3', 'c1'],
     tittle: 'Vegetable Stir Fry',
-    imageUrl: 'https://images.unsplash.com/photo-1598462485283-1e5c6bc6a1f9',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Carrot', 'Broccoli', 'Tofu', 'Soy Sauce'],
     steps: ['Chop vegetables', 'Stir fry in a pan', 'Serve'],
     duration: 20,
@@ -19,9 +20,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '2',
-    categories: ['Breakfast', 'Vegan'],
+    categories: ['c4', 'c8'],
     tittle: 'Avocado Toast',
-    imageUrl: 'https://images.unsplash.com/photo-1572092492904-4cf149dbd9b0',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Bread', 'Avocado', 'Lemon', 'Olive Oil'],
     steps: ['Toast the bread', 'Mash the avocado', 'Spread on toast', 'Serve'],
     duration: 10,
@@ -34,9 +36,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '3',
-    categories: ['Lunch', 'Non-Vegetarian'],
+    categories: ['c5', 'c1'],
     tittle: 'Chicken Caesar Salad',
-    imageUrl: 'https://images.unsplash.com/photo-1589919172630-33b05d2f7f8f',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Chicken', 'Lettuce', 'Croutons', 'Caesar Dressing'],
     steps: [
       'Grill the chicken',
@@ -54,9 +57,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '4',
-    categories: ['Snack', 'Vegan'],
+    categories: ['c7', 'c8'],
     tittle: 'Fruit Salad',
-    imageUrl: 'https://images.unsplash.com/photo-1587627000783-c13f21238adf',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Apple', 'Banana', 'Orange', 'Strawberries'],
     steps: ['Chop fruits', 'Mix them in a bowl', 'Serve'],
     duration: 10,
@@ -69,9 +73,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '5',
-    categories: ['Dinner', 'Non-Vegetarian'],
+    categories: ['c3', 'c4'],
     tittle: 'Spaghetti Bolognese',
-    imageUrl: 'https://images.unsplash.com/photo-1568668242-4e9c33a8ff99',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Spaghetti', 'Ground Beef', 'Tomato Sauce', 'Garlic'],
     steps: ['Boil spaghetti', 'Cook ground beef', 'Add sauce and mix'],
     duration: 30,
@@ -84,10 +89,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '6',
-    categories: ['Breakfast', 'Vegetarian'],
+    categories: ['c5', 'c6'],
     tittle: 'Oatmeal with Berries',
     imageUrl:
-        'https://www.hummusapien.com/wp-content/uploads/2022/08/overnight-steel-cut-oatmeal-4-ingredients.jpg',
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Oats', 'Almond Milk', 'Blueberries', 'Honey'],
     steps: [
       'Cook oats with almond milk',
@@ -104,9 +109,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '7',
-    categories: ['Lunch', 'Vegan'],
+    categories: ['c2', 'c3'],
     tittle: 'Chickpea Salad',
-    imageUrl: 'https://images.unsplash.com/photo-1603765724870-02e89bc6f84a',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Chickpeas', 'Cucumber', 'Tomato', 'Olive Oil'],
     steps: [
       'Chop vegetables',
@@ -124,9 +130,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '8',
-    categories: ['Dinner', 'Non-Vegetarian'],
+    categories: ['c4'],
     tittle: 'Grilled Salmon',
-    imageUrl: 'https://images.unsplash.com/photo-1599746978016-3385c9ac702f',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Salmon', 'Garlic', 'Lemon', 'Olive Oil'],
     steps: ['Marinate salmon', 'Grill for 5-7 minutes', 'Serve with lemon'],
     duration: 20,
@@ -139,9 +146,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '9',
-    categories: ['Lunch', 'Vegetarian'],
+    categories: ['c1', 'c7'],
     tittle: 'Caprese Salad',
-    imageUrl: 'https://images.unsplash.com/photo-1563201549-0cbfdfe70e80',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Tomato', 'Mozzarella', 'Basil', 'Olive Oil'],
     steps: [
       'Slice tomatoes and mozzarella',
@@ -158,9 +166,10 @@ List<Meal> dummyMeals = [
   ),
   Meal(
     id: '10',
-    categories: ['Snack', 'Non-Vegetarian'],
+    categories: ['c8', 'c3'],
     tittle: 'Chicken Wrap',
-    imageUrl: 'https://images.unsplash.com/photo-1620307171675-4bc68f332b9b',
+    imageUrl:
+        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
     ingredients: ['Chicken', 'Lettuce', 'Tortilla', 'Mayonnaise'],
     steps: [
       'Cook chicken',
