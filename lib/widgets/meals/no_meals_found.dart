@@ -20,7 +20,7 @@ class NoMealsFound extends StatelessWidget {
                 .copyWith(color: Theme.of(context).colorScheme.onSurface),
           ),
           Text(
-            'Try seleceting a different category!',
+            'Try selecting a different category!',
             style: Theme.of(context)
                 .textTheme
                 .titleLarge!
