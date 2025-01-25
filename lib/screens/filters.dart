@@ -5,14 +5,12 @@ import 'package:meals_menu/widgets/filters/switch_tile_item.dart';
 enum FilterOption { glutterFree, lactoseFree, vetegarian, vegan }
 
 class FiltersScreen extends StatelessWidget {
-  FiltersScreen({super.key, required this.filterValues});
+  const FiltersScreen({super.key, required this.currentFilters});
 
-  final Map<FilterOption, bool> filterValues;
-  Map<FilterOption, bool> filterOptionsCopy = {};
+  final Map<FilterOption, bool> currentFilters;
 
   @override
   Widget build(BuildContext context) {
-    filterOptionsCopy.addAll(filterValues);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your filters'),
@@ -21,7 +19,7 @@ class FiltersScreen extends StatelessWidget {
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
           if (!didPop) {
-            Navigator.pop(context, filterOptionsCopy);
+            Navigator.pop(context, currentFilters);
           }
         },
         child: Column(
@@ -29,33 +27,33 @@ class FiltersScreen extends StatelessWidget {
             SwitchTileItem(
               tittle: 'Glutten-free',
               subtittle: 'Only includes Gluten-free meals.',
-              defaultValue: filterOptionsCopy[FilterOption.glutterFree]!,
+              defaultValue: currentFilters[FilterOption.glutterFree]!,
               onCheckingFilterOption: (isChecked) {
-                filterOptionsCopy[FilterOption.glutterFree] = isChecked;
+                currentFilters[FilterOption.glutterFree] = isChecked;
               },
             ),
             SwitchTileItem(
               tittle: 'Lactose-free',
               subtittle: 'Only includes Lactose-free meals.',
-              defaultValue: filterOptionsCopy[FilterOption.lactoseFree]!,
+              defaultValue: currentFilters[FilterOption.lactoseFree]!,
               onCheckingFilterOption: (isChecked) {
-                filterOptionsCopy[FilterOption.lactoseFree] = isChecked;
+                currentFilters[FilterOption.lactoseFree] = isChecked;
               },
             ),
             SwitchTileItem(
               tittle: 'Vegetarian',
               subtittle: 'Only includes Vegetarian meals.',
-              defaultValue: filterOptionsCopy[FilterOption.vetegarian]!,
+              defaultValue: currentFilters[FilterOption.vetegarian]!,
               onCheckingFilterOption: (isChecked) {
-                filterOptionsCopy[FilterOption.vetegarian] = isChecked;
+                currentFilters[FilterOption.vetegarian] = isChecked;
               },
             ),
             SwitchTileItem(
               tittle: 'Vegan',
               subtittle: 'Only includes Vegan meals.',
-              defaultValue: filterOptionsCopy[FilterOption.vegan]!,
+              defaultValue: currentFilters[FilterOption.vegan]!,
               onCheckingFilterOption: (isChecked) {
-                filterOptionsCopy[FilterOption.vegan] = isChecked;
+                currentFilters[FilterOption.vegan] = isChecked;
               },
             ),
           ],
