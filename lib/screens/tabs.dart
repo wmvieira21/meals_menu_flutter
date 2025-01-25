@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:meals_menu/models/meal.dart';
 import 'package:meals_menu/screens/categories.dart';
+import 'package:meals_menu/screens/filters.dart';
 import 'package:meals_menu/screens/meals.dart';
+import 'package:meals_menu/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -26,11 +28,37 @@ class _TabsScreen extends State<TabsScreen> {
     setState(() {
       if (favoritesMeals.contains(meal)) {
         favoritesMeals.remove(meal);
+        _showInfoMessage('Meal removed from favorites');
       } else {
         favoritesMeals.add(meal);
+        _showInfoMessage('Meal marked as a favorite');
       }
       meal.isFavorite = !meal.isFavorite;
     });
+  }
+
+  void _showInfoMessage(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        duration: Duration(seconds: 3),
+      ),
+    );
+  }
+
+  void _setScreen(String identifier) {
+    Navigator.of(context).pop();
+
+    if (identifier == 'meals') {
+      if (_selectedPageIndex == 1) {
+        _selectPage(0);
+      }
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => FiltersScreen()),
+      );
+    }
   }
 
   @override
@@ -50,6 +78,9 @@ class _TabsScreen extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(activePageTittle),
+      ),
+      drawer: MainDrawer(
+        onSetScreenDrawer: (identifier) => _setScreen(identifier),
       ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
