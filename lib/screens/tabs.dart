@@ -85,7 +85,6 @@ class _TabsScreen extends State<TabsScreen> {
   }
 
   List<Meal> get filteredMeals {
-    print(_selectedFilters);
     return meals.where((meal) {
       if (_selectedFilters[FilterOption.glutterFree]! && !meal.isGlutenFree) {
         return false;

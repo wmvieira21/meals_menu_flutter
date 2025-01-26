@@ -7,7 +7,7 @@ List<Meal> dummyMeals = [
     categories: ['c3', 'c1'],
     tittle: 'Vegetable Stir Fry',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://natashaskitchen.com/wp-content/uploads/2020/08/Vegetable-Stir-Fry-2.jpg',
     ingredients: ['Carrot', 'Broccoli', 'Tofu', 'Soy Sauce'],
     steps: [
       'Chop vegetables Chop vegetablesChop vegetablesChop vegetablesChop vegetablesChop vegetablesChop vegetablesChop vegetablesChop vegetables ',
@@ -27,7 +27,7 @@ List<Meal> dummyMeals = [
     categories: ['c4', 'c8'],
     tittle: 'Avocado Toast',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9AIvAc6dkD5GTVhVASi91F4Jc4n7AbOFhw&s',
     ingredients: ['Bread', 'Avocado', 'Lemon', 'Olive Oil'],
     steps: ['Toast the bread', 'Mash the avocado', 'Spread on toast', 'Serve'],
     duration: 10,
@@ -43,7 +43,7 @@ List<Meal> dummyMeals = [
     categories: ['c5', 'c1'],
     tittle: 'Chicken Caesar Salad',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKFJzudm3DbHkSh7V97R48j6zJgPriuTkHew&s',
     ingredients: ['Chicken', 'Lettuce', 'Croutons', 'Caesar Dressing'],
     steps: [
       'Grill the chicken',
@@ -64,7 +64,7 @@ List<Meal> dummyMeals = [
     categories: ['c7', 'c8'],
     tittle: 'Fruit Salad',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://assets.bonappetit.com/photos/66749405968665df78f49b80/4:3/w_4444,h_3333,c_limit/fourth-trimester-mixed-fruit-salad_LEDE_V2_061124_1745_VOG_final.jpg',
     ingredients: ['Apple', 'Banana', 'Orange', 'Strawberries'],
     steps: ['Chop fruits', 'Mix them in a bowl', 'Serve'],
     duration: 10,
@@ -80,7 +80,7 @@ List<Meal> dummyMeals = [
     categories: ['c3', 'c4', 'c1'],
     tittle: 'Spaghetti Bolognese',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu2FEm-L43OU36h8exife2sBQa3GAHADfnYg&s',
     ingredients: ['Spaghetti', 'Ground Beef', 'Tomato Sauce', 'Garlic'],
     steps: ['Boil spaghetti', 'Cook ground beef', 'Add sauce and mix'],
     duration: 30,
@@ -96,7 +96,7 @@ List<Meal> dummyMeals = [
     categories: ['c5', 'c6'],
     tittle: 'Oatmeal with Berries',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9gBjTJnLa6A4Kpv69N86A6KuSULFho_oC7w&s',
     ingredients: ['Oats', 'Almond Milk', 'Blueberries', 'Honey'],
     steps: [
       'Cook oats with almond milk',
@@ -116,7 +116,7 @@ List<Meal> dummyMeals = [
     categories: ['c2', 'c3'],
     tittle: 'Chickpea Salad',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWKlonAKVav2_PrZFCIxnhRAiWc58I4FWdDA&s',
     ingredients: ['Chickpeas', 'Cucumber', 'Tomato', 'Olive Oil'],
     steps: [
       'Chop vegetables',
@@ -153,7 +153,7 @@ List<Meal> dummyMeals = [
     categories: ['c1', 'c7'],
     tittle: 'Caprese Salad',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://hips.hearstapps.com/hmg-prod/images/caprese-salad-recipe-2-664ceea357d6f.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*',
     ingredients: ['Tomato', 'Mozzarella', 'Basil', 'Olive Oil'],
     steps: [
       'Slice tomatoes and mozzarella',
@@ -173,7 +173,7 @@ List<Meal> dummyMeals = [
     categories: ['c8', 'c3'],
     tittle: 'Chicken Wrap',
     imageUrl:
-        'https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg',
+        'https://masonfit.com/wp-content/uploads/2024/05/healthy-buffalo-chicken-wraps-recipe-720x540.jpg',
     ingredients: ['Chicken', 'Lettuce', 'Tortilla', 'Mayonnaise'],
     steps: [
       'Cook chicken',
