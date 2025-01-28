@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals_menu/models/meal.dart';
 import 'package:meals_menu/widgets/filters/switch_tile_item.dart';
 
 enum FilterOption { glutterFree, lactoseFree, vetegarian, vegan }

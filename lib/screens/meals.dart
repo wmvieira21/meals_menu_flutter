@@ -5,15 +5,11 @@ import 'package:meals_menu/widgets/meals/meal_item.dart';
 import 'package:meals_menu/widgets/meals/no_meals_found.dart';
 
 class MealsScreen extends StatelessWidget {
-  const MealsScreen(
-      {super.key,
-      this.tittle,
-      required this.meals,
-      required this.onToggleFavoriteMeal});
+  const MealsScreen({super.key, this.tittle, required this.meals});
 
   final String? tittle;
   final List<Meal> meals;
-  final Function(Meal meal) onToggleFavoriteMeal;
+  // final Function(Meal meal) onToggleFavoriteMeal;
 
   Widget _getMainContent(BuildContext context) {
     if (meals.isEmpty) {
@@ -32,10 +28,7 @@ class MealsScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {
-        return MealDetailsScreen(
-          meal: meal,
-          onToggleFavoriteMeal: onToggleFavoriteMeal,
-        );
+        return MealDetailsScreen(meal: meal);
       }),
     );
   }
