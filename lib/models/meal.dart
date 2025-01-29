@@ -16,8 +16,7 @@ class Meal {
       required this.isGlutenFree,
       required this.isLactoseFree,
       required this.isVegan,
-      required this.isVegetarian,
-      this.isFavorite = false});
+      required this.isVegetarian});
 
   final String id;
   final List<String> categories;
@@ -32,5 +31,4 @@ class Meal {
   final bool isLactoseFree;
   final bool isVegan;
   final bool isVegetarian;
-  bool isFavorite;
 }

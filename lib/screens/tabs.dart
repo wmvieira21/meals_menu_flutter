@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meals_menu/data/dummy_meals.dart';
-import 'package:meals_menu/models/meal.dart';
 import 'package:meals_menu/provider/favorites_provider.dart';
 import 'package:meals_menu/provider/filters_provider.dart';
-import 'package:meals_menu/provider/meals_provider.dart';
 import 'package:meals_menu/screens/categories.dart';
 import 'package:meals_menu/screens/filters.dart';
 import 'package:meals_menu/screens/meals.dart';
@@ -78,31 +75,31 @@ class _TabsScreen extends ConsumerState<TabsScreen> {
     }
   }
 
-  List<Meal> filteredMeals(List<Meal> meals) {
-    final selectedFilters = ref.watch(filtersProvider);
-    return meals.where((meal) {
-      if (selectedFilters[FilterOption.glutterFree]! && !meal.isGlutenFree) {
-        return false;
-      }
-      if (selectedFilters[FilterOption.lactoseFree]! && !meal.isLactoseFree) {
-        return false;
-      }
-      if (selectedFilters[FilterOption.vegan]! && !meal.isVegan) {
-        return false;
-      }
-      if (selectedFilters[FilterOption.vetegarian]! && !meal.isVegetarian) {
-        return false;
-      }
-      return true;
-    }).toList();
-  }
+  // List<Meal> filteredMeals(List<Meal> meals) {
+  //   final selectedFilters = ref.watch(filtersProvider);
+  //   return meals.where((meal) {
+  //     if (selectedFilters[FilterOption.glutterFree]! && !meal.isGlutenFree) {
+  //       return false;
+  //     }
+  //     if (selectedFilters[FilterOption.lactoseFree]! && !meal.isLactoseFree) {
+  //       return false;
+  //     }
+  //     if (selectedFilters[FilterOption.vegan]! && !meal.isVegan) {
+  //       return false;
+  //     }
+  //     if (selectedFilters[FilterOption.vetegarian]! && !meal.isVegetarian) {
+  //       return false;
+  //     }
+  //     return true;
+  //   }).toList();
+  // }
 
   @override
   Widget build(BuildContext context) {
-    final meals = ref.watch(mealsProvider);
     final favoriteMeals = ref.watch(favoriteMealsProvider);
+    final filteredMeals = ref.watch(filteredMealsProvider);
 
-    Widget activePage = CategoriesScreen(availableMeals: filteredMeals(meals));
+    Widget activePage = CategoriesScreen(availableMeals: filteredMeals);
     String activePageTittle = 'Categories';
 
     if (_selectedPageIndex == 1) {
