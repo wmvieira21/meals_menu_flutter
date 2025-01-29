@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meals_menu/provider/filters_provider.dart';
 
-class SwitchTileItem extends StatefulWidget {
-  SwitchTileItem(
+class SwitchTileItem extends ConsumerStatefulWidget {
+  const SwitchTileItem(
       {super.key,
       required this.tittle,
       required this.subtittle,
-      required this.defaultValue,
-      required this.onCheckingFilterOption});
+      required this.optionFilter});
 
   final String tittle;
   final String subtittle;
-  final Function(bool isChecked) onCheckingFilterOption;
-  bool defaultValue;
+  final FilterOption optionFilter;
+  // final Function(bool isChecked) onCheckingFilterOption;
 
   @override
-  State<StatefulWidget> createState() {
+  ConsumerState<ConsumerStatefulWidget> createState() {
     return _SwitchTileItem();
   }
 }
 
-class _SwitchTileItem extends State<SwitchTileItem> {
+class _SwitchTileItem extends ConsumerState<SwitchTileItem> {
   @override
   Widget build(BuildContext context) {
+    final Map<FilterOption, bool> selectedFilters = ref.watch(filtersProvider);
+
     return SwitchListTile(
       key: ValueKey(widget.tittle),
-      value: widget.defaultValue,
-      onChanged: (ischecked) {
-        setState(() {
-          widget.defaultValue = ischecked;
-        });
-        widget.onCheckingFilterOption(widget.defaultValue);
-      },
+      value: selectedFilters[widget.optionFilter]!,
+      onChanged: (isChecked) => ref
+          .read(filtersProvider.notifier)
+          .setFilter(widget.optionFilter, isChecked),
       title: Text(
         widget.tittle,
         style: Theme.of(context)
